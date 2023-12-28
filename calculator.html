@@ -59,23 +59,31 @@
         <button class="button" onclick="appendToDisplay('/')">/</button>
         <button class="button" onclick="appendToDisplay('*')">*</button>
         <button class="button" onclick="appendToDisplay('-')">-</button>
-        <button class="button" onclick="appendToDisplay('7')">7</button>
-        <button class="button" onclick="appendToDisplay('8')">8</button>
-        <button class="button" onclick="appendToDisplay('9')">9</button>
         <button class="button" onclick="appendToDisplay('+')">+</button>
-        <button class="button" onclick="appendToDisplay('4')">4</button>
-        <button class="button" onclick="appendToDisplay('5')">5</button>
-        <button class="button" onclick="appendToDisplay('6')">6</button>
-        <button class="button" onclick="calculate()">=</button>
+        <button class="button" onclick="appendToDisplay('.')">.</button>
         <button class="button" onclick="appendToDisplay('1')">1</button>
         <button class="button" onclick="appendToDisplay('2')">2</button>
         <button class="button" onclick="appendToDisplay('3')">3</button>
-        <button id="equals" class="button" onclick="calculate()">=</button>
+        <button class="button" onclick="appendToDisplay('4')">4</button>
+        <button class="button" onclick="appendToDisplay('5')">5</button>
+        <button class="button" onclick="appendToDisplay('6')">6</button>
+        <button class="button" onclick="appendToDisplay('7')">7</button>
+        <button class="button" onclick="appendToDisplay('8')">8</button>
+        <button class="button" onclick="appendToDisplay('9')">9</button>
         <button class="button" onclick="appendToDisplay('0')">0</button>
-        <button class="button" onclick="appendToDisplay('.')">.</button>
+        <button id="equals" class="button" onclick="calculate()">=</button>
+        <button class="button" onclick="backSpace()">Del</button>
+        
+        
     </div>
 
     <script>
+        
+        function backSpace() {
+            let currentDisplay=document.getElementById('display').value;
+            document.getElementById('display').value=currentDisplay.substring(0,currentDisplay.length - 1);
+            
+        }
         function appendToDisplay(value) {
             document.getElementById('display').value += value;
         }
@@ -95,4 +103,3 @@
 
 </body>
 </html>
-
